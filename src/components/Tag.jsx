@@ -3,9 +3,9 @@ import React from 'react'
 const Tag = ({name,selectTag,selected}) => {
   const nameStyle = {
     HTML:`bg-[#fda821]`,
-    CSS:`bg-[#15d4c8]`,
+    CSS:`bg-red-300`,
     ReactJs:`bg-[#ffd12c]`,
-    Javascript:`bg-[#4cdafc]`,
+    Javascript:`bg-teal-500`,
     default:`bg-[#f9f9f9]`
 
   }
