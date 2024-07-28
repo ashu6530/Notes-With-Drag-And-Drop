@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Tag from "./Tag";
+import NotificationInbox from "./NotificationInbox";
 
 const TaskForm = ({setTasks}) => {
   const [taskData, setTaskData] = useState({
@@ -51,11 +52,12 @@ const TaskForm = ({setTasks}) => {
   
   }
   return (
-    <header className="row-span-1 flex items-center justify-center border-b-2 border-[#dcdcdc] p-4">
+    <header className=" mt-2 row-span-1 flex items-center justify-center border-b-2 border-[#dcdcdc] p-4">
       <form onSubmit={handleSubmit} className="w-1/2  text-center">
+      
         <input
           value={taskData.task}
-          className="text-lg w-full text-black  font-mono bg-[#f9f9f9] focus:outline-[#dfe3e6] rounded-lg px-4 py-2 mb-4 placeholder:text-blue-500"
+          className="text-lg w-full text-black  font-mono bg-[#f9f9f9] focus:outline-[#dfe3e6]  rounded-lg px-4 py-2 mb-4 placeholder:text-blue-500"
           type="text"
           name="task"
           placeholder="Enter your task"

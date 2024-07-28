@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskColumn from "./components/TaskColumn";
+import NotificationInbox from "./components/NotificationInbox";
 
 const oldTasks = localStorage.getItem('tasks')
 console.log(oldTasks);
@@ -29,14 +30,21 @@ const App = () => {
   setTask(updatedTasks)
   }
   return (
+    <>
     <div className="grid grid-rows-[150px] h-screen">
+    
       <TaskForm setTasks={setTask} />
       <main className="flex justify-center gap-4 mt-8">
         <TaskColumn  icon="🌟" name="To do" tasks={tasks} status="todo" handleDelete={handleDelete} setActiveCard={setActiveCard} onDrop={onDrop} />
         <TaskColumn icon="🔥" name="Doing" tasks={tasks} status="doing" handleDelete={handleDelete} setActiveCard={setActiveCard} onDrop={onDrop} />
         <TaskColumn icon="✅" name="Done" tasks={tasks} status="done" handleDelete={handleDelete} setActiveCard={setActiveCard} onDrop={onDrop}  />
       </main>
+      <div className="text-center">
+     <NotificationInbox/>
     </div>
+    </div>
+    
+    </>
   );
 };
 
