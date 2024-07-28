@@ -1,5 +1,6 @@
 import React from 'react';
 import SuprSendInbox from '@suprsend/react-inbox';
+import { HiBellSnooze } from "react-icons/hi2";
 import 'react-toastify/dist/ReactToastify.css';
 
 const NotificationInbox = () => {
@@ -16,6 +17,7 @@ const NotificationInbox = () => {
     return (
         
                 <SuprSendInbox 
+                    bellComponent={() => <p className='text-4xl'><HiBellSnooze /></p>}
                     workspaceKey={workspaceKey} 
                     subscriberId={subscriberId} 
                     distinctId={distinctId} 
